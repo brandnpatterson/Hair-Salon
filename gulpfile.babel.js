@@ -1,7 +1,7 @@
 import gulp       from 'gulp';
 import del        from 'del';
 import eslint     from 'gulp-eslint';
-import imagemin   from 'gulp-imagemin';
+import nodemon    from 'gulp-nodemon';
 import prefix     from 'gulp-autoprefixer';
 import htmlmin    from 'gulp-htmlmin';
 import sass       from 'gulp-sass';
@@ -11,29 +11,40 @@ import webpack    from 'webpack-stream';
 
 var reload = sync.reload;
 
-gulp.task('clean', del.bind(null, ['index.html', 'public/style.css', 'public/bundle.js'], {read: false}));
+gulp.task('clean', del.bind(null, ['public/index.html', 'public/style.css', 'public/bundle.js'], {read: false}));
 
-gulp.task('default', ['html', 'server', 'styles', 'watch']);
+gulp.task('default', ['html', 'server', 'scripts', 'styles', 'watch']);
 
 gulp.task('html', () => {
-  return gulp.src('src/index.html')
+  return gulp.src('src/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./public'))
 });
 
 gulp.task('lint', () => {
-  return gulp.src(['*/**/*.js', '!node_modules/*', '!public/includes/*'])
+  return gulp.src(['*/**/*.js', '!node_modules/*', '!public/'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('server', ['scripts'], () => {
-  sync({
+gulp.task('nodemon', (cb) => {
+	var started = false;
+	return nodemon({
+		script: 'app.js'
+	}).on('start', function () {
+		if (!started) {
+			cb();
+			started = true;
+		}
+	});
+});
+
+gulp.task('server', ['nodemon'], () => {
+  sync.init(null, {
+    proxy: 'http://localhost:8887',
     notify: false,
-    server: {
-      baseDir: './'
-    },
+    files: 'public/**/*.*',
     port: 8888
   });
 });
@@ -55,6 +66,6 @@ gulp.task('styles', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*', ['scripts', reload]);
-  gulp.watch('src/index.html', ['html', reload]);
+  gulp.watch('src/*.html', ['html', reload]);
   gulp.watch('src/styles/**/*', ['styles', reload]);
 });

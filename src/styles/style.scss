@@ -6,6 +6,20 @@
 @import 'card';
 @import 'carousel';
 
+.top img {
+  cursor: pointer;
+  height: 75px;
+  width: 75px;
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+  z-index: 10;
+  @include min($medium) {
+    bottom: 40px;
+    right: 30px;
+  }
+}
+
 // navbar
 .navbar {
   background: white;
@@ -21,7 +35,7 @@
     justify-content: center;
     align-items: center;
     @include max($small) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     .card {
       display: flex;
@@ -44,30 +58,50 @@
 }
 
 // reviews
-.reviews.well {
+.reviews.jumbotron {
   height: contain;
-  padding: 0;
+  padding: 50px 0 0 0;
   margin: 0;
   .container {
-    h1 {
+    h2 {
       margin: 75px 0 40px;
     }
+  }
+  a {
+    color: blue;
+    font-size: 18px;
+    text-decoration: underline;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
   }
 }
 
 // location
-.location.card {
-  padding: 60px;
-  .title {
-    margin-bottom: 50px;
-  }
+.location {
+  margin: 120px auto;
   iframe {
     height: 100%;
     width: 100%;
   }
+  .title {
+    margin: 0 auto 50px;
+    @include min($medium) {
+      max-width: 80%;
+      font-size: 16px;
+    }
+  }
+  a.phone {
+    color: blue;
+    text-decoration: underline;
+    @include max($small) {
+      left: 15px;
+      bottom: -60px;
+    }
+  }
   @include max($small) {
+    margin: 50px auto 100px;
     box-shadow: none;
-    max-width: 100%;
   }
 }
 

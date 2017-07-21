@@ -1,9 +1,11 @@
-.carousel {
-  letter-spacing: 3px;
-  text-align: center;
+.carousel.card {
+  margin-top: 40px;
+  @include min($medium) {
+    margin-top: 80px;
+  }
+  position: relative;
+  max-width: 78%;
 }
-
-// carousel-indicators
 .carousel-indicators {
   li {
     border: none;

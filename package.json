@@ -1,18 +1,19 @@
 {
   "name": "hair-industry-salon",
-  "version": "1.0.2",
+  "version": "0.0.2",
   "scripts": {
     "deploy": "webpack -p && surge",
     "start": "gulp clean && gulp"
   },
   "author": "Brandon Patterson",
   "description": "hair-industry-salon",
-  "main": "public/bundle.js",
+  "main": "app.js",
   "url": "",
   "homepage": "",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -26,6 +27,7 @@
     "gulp-eslint": "^3.0.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.2.0",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "json-loader": "^0.5.4",
