@@ -105,6 +105,14 @@
   }
 }
 
+// services
+.services {
+  &__category {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 // footer
 footer.jumbotron {
   text-align: center;

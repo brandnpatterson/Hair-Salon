@@ -10,4 +10,8 @@ router.get('/schedule', (req, res) => {
   res.render('schedule');
 });
 
+router.get('/services', (req, res) => {
+  res.render('services');
+});
+
 module.exports = router;

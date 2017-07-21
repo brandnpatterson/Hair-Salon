@@ -13,15 +13,9 @@ var reload = sync.reload;
 
 gulp.task('build', ['scripts', 'styles']);
 
-gulp.task('clean', del.bind(null, ['public/index.html', 'public/style.css', 'public/bundle.js'], {read: false}));
+gulp.task('clean', del.bind(null, ['public/style.css', 'public/bundle.js'], {read: false}));
 
-gulp.task('default', ['html', 'server', 'build', 'watch']);
-
-gulp.task('html', () => {
-  return gulp.src('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./public'))
-});
+gulp.task('default', ['server', 'build', 'watch']);
 
 gulp.task('lint', () => {
   return gulp.src(['*/**/*.js', '!node_modules/*', '!public/'])
@@ -68,6 +62,6 @@ gulp.task('styles', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*', ['scripts', reload]);
-  gulp.watch('src/*.html', ['html', reload]);
+  gulp.watch('views/**/*.hbs', reload);
   gulp.watch('src/styles/**/*', ['styles', reload]);
 });

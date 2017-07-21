@@ -6,11 +6,14 @@ const topButton = {
   init () {
     this.cacheDOM();
     this.bindEvent();
-    console.log('init');
   },
   cacheDOM () {
     this.top = $('.top');
-    this.target = $('.schedule').offset().top;
+    if (!$('.schedule').length) {
+      return;
+    } else {
+      this.target = $('.schedule').offset().top;
+    }
     this.timeout = null;
   },
   bindEvent () {
