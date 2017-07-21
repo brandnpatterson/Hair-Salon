@@ -1,18 +1,17 @@
 {
-  "name": "crawford-notch",
+  "name": "hair-industry-salon",
   "version": "1.0.2",
   "scripts": {
     "deploy": "webpack -p && surge",
     "start": "gulp clean && gulp"
   },
   "author": "Brandon Patterson",
-  "description": "crawford-notch",
+  "description": "hair-industry-salon",
   "main": "public/bundle.js",
   "url": "",
   "homepage": "",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "handlebars": "^4.0.6",
     "instafeed.js": "^1.4.1",
     "jquery": "^3.2.1"
@@ -40,9 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson/crawford-notch.git"
+    "url": "git+https://github.com/brandnpatterson/hair-industry-salon.git"
   },
   "bugs": {
-    "url": "https://github.com/brandnpatterson/crawford-notch/issues"
+    "url": "https://github.com/brandnpatterson/hair-industry-salon/issues"
   }
 }

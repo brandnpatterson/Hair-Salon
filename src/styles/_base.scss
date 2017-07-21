@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../public/fonts/OpenSans-Regular-webfont.eot');
+  src: url('../public/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../public/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+       url('../public/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('../public/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Open Sans';
+  h2 {
+    color: gray;
+  }
+}

@@ -1,0 +1,23 @@
+.carousel-indicators {
+  li {
+    border: none;
+    background: white;
+  }
+  .active {
+    opacity: 0.5;
+  }
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+  margin: 0 7px;
+}
+
+.carousel-control,
+.carousel-control.right,
+.carousel-control.left {
+  background: none;
+  &:hover {
+    background: inherit;
+  }
+}
