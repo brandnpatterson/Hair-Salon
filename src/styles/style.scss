@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../public/fonts/OpenSans-Regular-webfont.eot');
+  src: url('../public/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../public/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+       url('../public/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('../public/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Open Sans';
+  h2 {
+    color: gray;
+  }
+}
+
+.container {
+  max-width: 85%;
+}
+
+// navbar
+.navbar {
+  background: white;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+// carousel
+.carousel-indicators {
+  li {
+    border: none;
+    background: white;
+  }
+  .active {
+    opacity: 0.5;
+  }
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+  margin: 0 7px;
+}
+
+.carousel-control,
+.carousel-control.right,
+.carousel-control.left {
+  background: none;
+  &:hover {
+    background: inherit;
+  }
+}
+
+// card
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+  margin: 100px auto;
+  max-width: 80%;
+}
+
+// section two
+#section-two {
+  .card {
+    img {
+      max-width: 90%;
+      padding: 20px 0;
+    }
+  }
+}
+
+// footer
+footer {
+  text-align: center;
+}
