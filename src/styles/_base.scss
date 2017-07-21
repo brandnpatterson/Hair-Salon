@@ -11,7 +11,16 @@
 
 body {
   font-family: 'Open Sans';
-  h2 {
-    color: gray;
+}
+
+.jumbotron {
+  background: rgba(240, 240, 240, 0.5);
+  .title {
+    margin-bottom: 50px;
   }
+  padding: 100px 0;
+}
+
+.title {
+  text-align: center;
 }

@@ -1,3 +1,4 @@
 $(function () {
-  $('#carousel').carousel();
+  $('#landingCarousel').carousel();
+  $('#reviewsCarousel').carousel();
 });

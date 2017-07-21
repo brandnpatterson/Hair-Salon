@@ -1,11 +1,10 @@
 @import 'vars';
 @import 'mixins';
 @import 'base';
+@import 'buttons';
+@import 'typography';
+@import 'card';
 @import 'carousel';
-
-.container {
-  max-width: 85%;
-}
 
 // navbar
 .navbar {
@@ -14,30 +13,48 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 
-// card
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
-  margin: 100px auto;
-  max-width: 80%;
-  @include mediaQuery($large) {
-    max-width: 65%;
-  }
-}
-
-// section two
-.section {
-  .card {
-    img {
-      max-width: 90%;
-      padding: 20px 0;
+// schedule
+.schedule {
+  margin-bottom: 100px;
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include max($small) {
+      flex-direction: column;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      margin: 5%;
+      @include max($small) {
+        height: 200px;
+        width: 300px;
+        margin: 4%;
+      }
+      .title {
+        margin: 25px;
+      }
     }
   }
 }
 
+// location
+.location {
+  padding: 60px;
+  .title {
+    margin-bottom: 50px;
+  }
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 // footer
-footer {
+footer.jumbotron {
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

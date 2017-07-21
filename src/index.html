@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport", content="width=device-width, initial-scale=1" />
     <meta http-equiv="x-ua-compatible", content="ie=edge" />
-    <meta name="description" content="Hair Industry Website" />
+    <meta name="description" content="Hair Industry Salon of Lake Jackson Website" />
     <meta name="author" content="Brandon Patterson" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="public/style.css" />
-    <title>Hair Industry</title>
+    <title>Hair Industry Salon of Lake Jackson</title>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-static-top">
@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">
-              <i class="material-icons">blur_on</i>
+            Hair Industry Salon
           </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -40,26 +40,20 @@
             </li>
             <li><a href="#location">Location</a></li>
             <li><a href="#location">Reviews</a></li>
-            <li><a href="#location">Contact</a></li>
+            <li><a href="#location">Schedule Now</a></li>
           </ul>
           <ul class="nav navbar-nav pull-right">
-            <li>
-              <a href="tel:979-236-4789">(979) 236-4789</a>
-            </li>
+            <li><a href="tel:979-236-4789">(979) 236-4789</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav><!--/.navbar -->
 
-    <div class="container">
-      <h2 class="title">Hair Industry</h2>
-    </div>
-
-    <div id="carousel" class="card carousel slide section section-one" data-interval="2500">
+    <div id="landingCarousel" class="card carousel slide" data-interval="3000">
       <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
+        <li data-target="#landingCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#landingCarousel" data-slide-to="1"></li>
+        <li data-target="#landingCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
@@ -72,29 +66,82 @@
           <img class="d-block img-fluid" src="public/images/woman-hair-2.jpg" alt="Third slide">
         </div>
       </div>
-      <a class="carousel-control left" href="#carousel" role="button" data-slide="prev">
+      <a class="carousel-control left" href="#landingCarousel" role="button" data-slide="prev">
         <span class="carousel-control icon-prev" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control right" href="#carousel" role="button" data-slide="next">
+      <a class="carousel-control right" href="#landingCarousel" role="button" data-slide="next">
         <span class="carousel-control icon-next" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+    </div><!--/#landingCarousel -->
+
+    <div class="schedule">
+      <div class="container">
+        <div class="row">
+          <div class="card col-xs-6">
+            <h2 class="title">
+              Hair Industry Salon of Lake Jackson
+            </h2>
+          </div>
+          <div class="card col-xs-6">
+            <h2 class="title">
+              Schedule an appointment now!
+            </h2>
+            <button class="btn btn-primary">Schedule</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="section section-two">
-      <div class="card">
-        <img src="public/images/woman-hair.jpg" alt="">
+    <div class="reviews jumbotron">
+      <div class="container">
+        <h2 class="title">
+            Here's what people are saying...
+        </h2>
+        <br />
+        <br />
+        <div id="reviewsCarousel" class="carousel carousel-fade" data-interval="5000">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div>
+                <p class="lead">
+                  "Lorena and the other stylists are very friendly and talented. I would highly recommend this to everyone."
+                </p>
+                <p>
+                  -Darla Wiles Grimes
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <p class="lead">
+                  "Lorena has been my hair stylist for years. Can't get much better of a cut in Lake Jackson."
+                </p>
+                <p>
+                  -Clyde Patterson
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div><!--/.section-two -->
+    </div>
 
-    <div class="section section-three">
-      <div class="card">
-        <img src="public/images/woman-hair.jpg" alt="">
-      </div>
-    </div><!--/.section-three -->
+    <div class="location card">
+      <div class="container">
+        <a href="https://goo.gl/maps/oYYmjwVJEEv">
+          <h3 class="title">
+              1001 Oyster Creek Drive Lake Jackson, TX 77566
+          </h3>
+        </a>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.1250493827533!2d-95.39229324893917!3d29.716136781914614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf8610513213%3A0x61f408cc441069f8!2sHouston+Zoo!5e0!3m2!1sen!2sus!4v1492116781011" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div><!--/#location -->
+    </div>
 
-    <footer class="footer">
+    <footer class="jumbotron">
       <div class="container">
         <a href="http://brandnpatterson.com/">
           <p class="text-muted">

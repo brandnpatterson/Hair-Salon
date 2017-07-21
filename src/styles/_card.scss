@@ -1,8 +1,13 @@
 .card {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
-  margin: 100px auto;
-  max-width: 80%;
+  max-width: 85%;
+  margin: 6% auto;
+  @include min($small) {
+    margin: 4% auto;
+    max-width: 65%;
+  }
 }
