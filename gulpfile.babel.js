@@ -11,9 +11,11 @@ import webpack    from 'webpack-stream';
 
 var reload = sync.reload;
 
+gulp.task('build', ['scripts', 'styles']);
+
 gulp.task('clean', del.bind(null, ['public/index.html', 'public/style.css', 'public/bundle.js'], {read: false}));
 
-gulp.task('default', ['html', 'server', 'scripts', 'styles', 'watch']);
+gulp.task('default', ['html', 'server', 'build', 'watch']);
 
 gulp.task('html', () => {
   return gulp.src('src/*.html')

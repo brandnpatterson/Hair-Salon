@@ -2,14 +2,15 @@
   "name": "hair-industry-salon",
   "version": "0.0.2",
   "scripts": {
-    "deploy": "webpack -p && surge",
-    "start": "gulp clean && gulp"
+    "deploy": "npm run prod && git push heroku master",
+    "prod": "gulp clean && gulp build && webpack -p",
+    "start": "gulp clean && gulp build && gulp"
   },
   "author": "Brandon Patterson",
   "description": "hair-industry-salon",
   "main": "app.js",
   "url": "",
-  "homepage": "",
+  "homepage": "http://hairindustrysalon.herokuapp.com",
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
@@ -42,5 +43,9 @@
   },
   "bugs": {
     "url": "https://github.com/brandnpatterson/hair-industry-salon/issues"
+  },
+  "engines": {
+    "node": "7.10.0",
+    "npm": "4.2.0"
   }
 }
