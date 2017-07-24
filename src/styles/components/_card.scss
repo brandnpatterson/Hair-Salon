@@ -4,4 +4,8 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+  margin: 25px 0;
+  @include min($medium) {
+    margin: 100px 0;
+  }
 }

@@ -1,0 +1,19 @@
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  @include min($medium) {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    .title {
+      margin-bottom: 40px;
+    }
+  }
+  @include max($medium) {
+    flex-direction: column-reverse;
+  }
+}

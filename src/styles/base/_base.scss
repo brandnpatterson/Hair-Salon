@@ -13,14 +13,6 @@ body {
   font-family: 'Open Sans';
 }
 
-.jumbotron {
-  background: rgba(240, 240, 240, 0.5);
-  .title {
-    margin-bottom: 50px;
-  }
-  padding: 100px 0;
-}
-
 .title {
   text-align: center;
 }
@@ -49,4 +41,29 @@ body {
   }
   animation: fade-in 1s;
   animation-fill-mode: forwards;
+}
+
+.wrapper {
+  max-width: 80%;
+}
+
+.navbar {
+  background: white;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  background: whitesmoke;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  img {
+    width: 60px;
+    margin: 30px;
+    height: auto;
+    @include max($small) {
+      width: 40px;
+    }
+  }
 }

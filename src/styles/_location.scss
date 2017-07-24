@@ -1,0 +1,27 @@
+.location {
+  padding: 75px 0 25px;
+  box-shadow: none;
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+  .title {
+    margin: 0 auto 20px;
+    @include min($medium) {
+      max-width: 80%;
+      font-size: 16px;
+    }
+  }
+  a.phone {
+    color: blue;
+    text-decoration: underline;
+    @include max($small) {
+      left: 15px;
+      bottom: -60px;
+    }
+  }
+  @include max($small) {
+    margin: 50px auto 100px;
+    box-shadow: none;
+  }
+}
