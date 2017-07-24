@@ -1,5 +1,8 @@
 .location {
-  padding: 75px 0 25px;
+  padding: 25px 0;
+  @include min($medium) {
+    padding: 25px 0 25px;
+  }
   box-shadow: none;
   iframe {
     height: 100%;
