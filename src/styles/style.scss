@@ -1,25 +1,19 @@
-@import './basics/vars';
-@import './basics/mixins';
-@import './basics/base';
-@import './buttons';
-@import './basics/typography';
+@import 'basics/vars';
+@import 'basics/mixins';
+@import 'basics/base';
+@import 'buttons';
+@import 'basics/typography';
 @import 'card';
 @import 'carousel';
+@import 'top';
 
-.top img {
-  cursor: pointer;
-  height: 75px;
-  width: 75px;
-  bottom: 10px;
-  right: 10px;
-  position: fixed;
-  z-index: 10;
-  @include min($medium) {
-    bottom: 40px;
-    right: 30px;
+// wrapper
+.wrapper {
+  max-width: 80%;
+  .card {
+    margin: 100px 0;
   }
 }
-
 // navbar
 .navbar {
   background: white;
@@ -29,11 +23,10 @@
 
 // schedule
 .schedule {
-  margin-bottom: 100px;
+  box-shadow: none;
   .row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     @include max($small) {
       flex-direction: column-reverse;
     }
@@ -41,7 +34,7 @@
       display: flex;
       flex-direction: column;
       height: 300px;
-      margin: 5%;
+      margin: 0 3%;
       .title {
         margin-bottom: 45px;
         @include max($small) {
@@ -58,28 +51,36 @@
 }
 
 // reviews
-.reviews.jumbotron {
+.reviews {
   height: contain;
-  padding: 50px 0 0 0;
-  margin: 0;
+  padding: 0;
+  margin: 0 auto;
   .container {
-    h2 {
+    h1 {
       margin: 75px 0 40px;
+    }
+    .carousel {
+      margin: 0 auto;
     }
   }
   a {
     color: blue;
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: underline;
     position: absolute;
-    right: 50px;
-    bottom: 50px;
+    right: 0;
+    bottom: 35px;
+    @include min($medium) {
+      font-size: 18px;
+      right: 120px;
+      bottom: 65px;
+    }
   }
 }
 
 // location
 .location {
-  margin: 120px auto;
+  box-shadow: none;
   iframe {
     height: 100%;
     width: 100%;
@@ -105,14 +106,6 @@
   }
 }
 
-// services
-.services {
-  &__category {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 // footer
 footer.jumbotron {
   text-align: center;
@@ -126,7 +119,12 @@ footer.jumbotron {
       width: 40px;
     }
   }
-  p {
-    font-size: 16px;
+}
+
+// services
+.services {
+  &__category {
+    display: flex;
+    flex-direction: column;
   }
 }

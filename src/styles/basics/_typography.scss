@@ -7,13 +7,39 @@ h2 {
   font-size: 16px;
 }
 
+.reviews {
+  h1 {
+  font-size: 24px;
+  }
+}
+
 .quote {
-  font-size: 16px;
+  margin: 0 auto;
   font-style: italic;
   letter-spacing: 2px;
   text-align: center;
+  font-size: 12px;
+  @include min($medium) {
+    font-size: 14px;
+    width: 500px;
+  }
+  @include min($large) {
+    width: 880px;
+  }
+  @include min($larger) {
+    width: 100%;
+  }
 }
 
 .quoter {
   text-align: right;
+  @include min($medium) {
+    padding: 50px 200px 0 0;
+  }
+}
+
+footer {
+  p {
+    font-size: 16px;
+  }
 }
