@@ -11,7 +11,7 @@
 .wrapper {
   max-width: 80%;
   .card {
-    margin: 100px 0;
+    margin: 50px 0;
   }
 }
 // navbar
@@ -23,30 +23,22 @@
 
 // schedule
 .schedule {
-  box-shadow: none;
-  .row {
+  display: flex;
+  justify-content: space-between;
+  @include min($medium) {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .card {
     display: flex;
-    justify-content: space-between;
-    @include max($small) {
-      flex-direction: column-reverse;
+    flex-direction: column;
+    padding: 50px;
+    .title {
+      margin-bottom: 40px;
     }
-    .card {
-      display: flex;
-      flex-direction: column;
-      height: 300px;
-      margin: 0 3%;
-      .title {
-        margin-bottom: 45px;
-        @include max($small) {
-          margin: 25px;
-        }
-      }
-      @include max($small) {
-        height: 200px;
-        width: 300px;
-        margin: 4%;
-      }
-    }
+  }
+  @include max($medium) {
+    flex-direction: column-reverse;
   }
 }
 
@@ -55,13 +47,11 @@
   height: contain;
   padding: 0;
   margin: 0 auto;
-  .container {
-    h1 {
-      margin: 75px 0 40px;
-    }
-    .carousel {
-      margin: 0 auto;
-    }
+  h1 {
+    margin: 75px 0 40px;
+  }
+  .carousel {
+    margin: 0 auto;
   }
   a {
     color: blue;
