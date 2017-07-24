@@ -1,4 +1,5 @@
 .location {
+  padding: 50px 0 0;
   @include min($medium) {
     padding: 25px 0 25px;
   }
