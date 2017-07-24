@@ -44,7 +44,10 @@ body {
 }
 
 .wrapper {
-  max-width: 80%;
+  max-width: 90%;
+  @include min($medium) {
+    max-width: 80%;
+  }
 }
 
 .navbar {
