@@ -21,8 +21,8 @@ const topButton = {
     this.top.on('click', this.handleScrollToTop.bind(this));
   },
   handleScrollToTop () {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.pageXOffset = 0;
+    window.pageXOffset = 0;
   },
   listenForScroll () {
     if (!this.timeout) {
