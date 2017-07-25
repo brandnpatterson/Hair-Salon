@@ -1,4 +1,4 @@
 $(function () {
-  $('#landingCarousel').carousel();
-  $('#reviewsCarousel').carousel();
+  $('#landing-carousel').carousel();
+  $('#reviews-carousel').carousel();
 });

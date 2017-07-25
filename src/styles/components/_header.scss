@@ -1,0 +1,57 @@
+header {
+  .contact {
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    @include max($medium) {
+      flex-direction: column;
+      margin: 30px 0;
+    }
+    div {
+      @include max($medium) {
+        margin: 10px 0;
+      }
+    }
+    &__phone {
+      a,
+      i {
+        font-size: 20px;
+      }
+    }
+    &__logo {
+      img {
+        width: 250px;
+      }
+    }
+  }
+  .navbar-toggle {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    &:hover {
+      border: 1px lightgray solid !important;
+      background: white !important;
+    }
+  }
+  .navbar {
+    background: white;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    padding: 0;
+    .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      li {
+        margin: 0 15px;
+        @include min($large) {
+          margin: 0 40px;
+        }
+      }
+    }
+    .navbar-collapse {
+      text-align: center;
+    }
+  }
+}

@@ -6,7 +6,7 @@
   right: 5px;
   position: fixed;
   z-index: 10;
-  @include min($medium) {
+  @include min($small) {
     bottom: 40px;
     height: 75px;
     width: 75px;

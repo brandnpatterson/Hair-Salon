@@ -1,8 +1,16 @@
 // landingCarousel
-#landingCarousel {
-  margin: 25px auto;
+.landing-carousel-wrapper {
+  background: url('images/blur.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 40px 0;
+  width: 100%;
+}
+#landing-carousel {
+  margin: 0 auto;
+  max-width: 80%;
   @include min($medium) {
-    margin-top: 50px;
     max-width: 80%;
   }
   .carousel-indicators {
@@ -32,6 +40,6 @@
 }
 
 // reviewsCarousel
-#reviewsCarousel {
+#reviews-carousel {
   height: 300px;
 }
