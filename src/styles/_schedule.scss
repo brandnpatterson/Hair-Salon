@@ -2,12 +2,12 @@
   justify-content:  space-around;
   background: $smoke;
   width: 100%;
-  &__button {
+  &__left {
     display: flex;
     flex-direction: column;
     padding: 50px;
   }
-  &__hours {
+  &__right {
     display: inline-block;
     padding: 40px 0;
     h2 {

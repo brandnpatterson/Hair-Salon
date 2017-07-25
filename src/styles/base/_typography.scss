@@ -1,6 +1,5 @@
 // font family
-.navbar,
-.home-wrapper {
+.navbar {
   font-family: $fancy;
 }
 
@@ -24,12 +23,18 @@ h2 {
   margin: 0;
 }
 
-h2 {
-  font-size: 18px;
+h1, h2, h3, h4 {
+  font-size: 22px;
 }
 
-h1 {
-font-size: 22px;
+.services {
+  .title {
+    font-size: 30px;
+  }
+}
+
+.title {
+  margin: 20px 0;
 }
 
 .navbar {
