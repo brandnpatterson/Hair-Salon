@@ -1,3 +1,16 @@
+// font family
+.navbar,
+.home-wrapper {
+  font-family: $fancy;
+}
+
+.schedule,
+.reviews a,
+.location {
+  font-family: $regular;
+}
+
+// font size / style
 a,
 h2 {
   color: black;
@@ -17,11 +30,6 @@ h2 {
 
 h1 {
 font-size: 22px;
-}
-
-.navbar,
-.home-wrapper {
-  font-family: 'Kleptocracy';
 }
 
 .navbar {

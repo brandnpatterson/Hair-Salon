@@ -1,19 +1,22 @@
 .schedule {
-  display: flex;
-  justify-content: space-between;
-  @include min($medium) {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-  .card {
+  justify-content:  space-around;
+  background: $smoke;
+  width: 100%;
+  &__button {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    .title {
-      margin-bottom: 40px;
-    }
   }
-  @include max($medium) {
-    flex-direction: column-reverse;
+  &__hours {
+    display: inline-block;
+    padding: 40px 0;
+    h2 {
+      color: gray;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    .title {
+      color: black;
+    }
   }
 }

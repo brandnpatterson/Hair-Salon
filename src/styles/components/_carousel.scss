@@ -9,9 +9,12 @@
 }
 #landing-carousel {
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 85%;
   @include min($medium) {
     max-width: 80%;
+  }
+  @include min($large) {
+    max-width: 70%;
   }
   .carousel-indicators {
     li {

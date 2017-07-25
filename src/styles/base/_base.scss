@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: 'Kleptocracy';
+  font-family: 'Kleptocracy Titling';
   src: url('fonts/Kleptocracy Titling.eot');
   src: url('fonts/Kleptocracy Titling.eot?#iefix') format('embedded-opentype'),
        url('fonts/Kleptocracy Titling.woff') format('woff'),
@@ -22,10 +22,6 @@
 
 body {
   font-family: 'Open Sans';
-}
-
-.title {
-  text-align: center;
 }
 
 .hidden {
@@ -52,13 +48,6 @@ body {
   }
   animation: fade-in 1s;
   animation-fill-mode: forwards;
-}
-
-.home-wrapper {
-  max-width: 90%;
-  @include min($medium) {
-    max-width: 80%;
-  }
 }
 
 footer {
