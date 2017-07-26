@@ -2,7 +2,7 @@
   "name": "hair-industry-salon",
   "version": "0.0.2",
   "scripts": {
-    "deploy": "npm run prod && git push heroku master",
+    "deploy": "npm run prod && git push heroku master && git push",
     "prod": "gulp clean && gulp build && webpack -p",
     "start": "gulp clean && gulp build && gulp"
   },
