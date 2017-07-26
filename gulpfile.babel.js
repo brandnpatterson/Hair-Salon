@@ -15,7 +15,7 @@ gulp.task('build', ['scripts', 'styles']);
 
 gulp.task('clean', del.bind(null, ['public/style.css', 'public/bundle.js'], {read: false}));
 
-gulp.task('default', ['server', 'build', 'watch']);
+gulp.task('default', ['server', 'watch']);
 
 gulp.task('lint', () => {
   return gulp.src(['*/**/*.js', '!node_modules/*', '!public/'])
@@ -45,7 +45,7 @@ gulp.task('server', ['nodemon'], () => {
   });
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', () => {
   return gulp.src(['src/js/index.js'])
     .pipe(webpack( require('./webpack.config.js') ))
     .pipe(gulp.dest('public'));
@@ -62,6 +62,6 @@ gulp.task('styles', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*', ['scripts', reload]);
-  gulp.watch('views/**/*.hbs', reload);
   gulp.watch('src/styles/**/*', ['styles', reload]);
+  gulp.watch('views/**/*.hbs', reload);
 });
