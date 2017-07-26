@@ -3,7 +3,6 @@ import del        from 'del';
 import eslint     from 'gulp-eslint';
 import nodemon    from 'gulp-nodemon';
 import prefix     from 'gulp-autoprefixer';
-import htmlmin    from 'gulp-htmlmin';
 import sass       from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import sync       from 'browser-sync';
